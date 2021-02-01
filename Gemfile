@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'rake'
+gem 'text-table'
+gem 'yaml'
+gem 'httparty'
+gem 'discord-notifier'

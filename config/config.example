@@ -1,0 +1,11 @@
+---
+:youtube_api_key: AsdfaGasdgaSomeLongGoogleDataApiV3Keyasdfasd
+:discord_webhook: https://discord.com/api/webhooks/80999999999999999/asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf_fun_long_webhook_url_asdfasdfa
+:discord_bot_name: Fun Discord Bot Name
+:max_comments: 2000
+:comment_days_back: 1
+:counts_greater_than: 20
+:channels:
+- UCaaaaaaabbbbbbbcccccccc
+- UCdddddddeeeeeeeffffffff
+- UCggggggghhhhhhhiiiiiiii
