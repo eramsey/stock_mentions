@@ -21,12 +21,20 @@ a = yt.pull_comment_words
 current_pull = File.open('tmp/current_pull.txt','w')
 current_pull.print a.join(' ')
 
-nyse_a = CSV.open('listings/nyse-listed.csv').to_a
-nyse_a.delete_at(0)
-nyse_h = nyse_a.to_h
-nyse_tickers = nyse_h.keys
-missing_tickers = nyse_tickers - a
-found_tickers = (nyse_tickers - missing_tickers).select{|ticker|ticker.size > 1}
+#####################
+# pull listings
+# 
+tickers = []
+listing_files = Dir.glob('listings/*.csv')
+listing_files.each do |listing_file|
+  p listing_file
+  listing = CSV.open("#{listing_file}").to_a
+  tickers << listing.to_h.keys
+end
+tickers.flatten!
+
+missing_tickers = tickers - a
+found_tickers = (tickers - missing_tickers).select{|ticker|ticker.size > 1}
 
 counts = Hash[found_tickers.map{|v|[v,0]}]
 
