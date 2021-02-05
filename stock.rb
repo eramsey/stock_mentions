@@ -63,5 +63,5 @@ end
 dur = Time.now - start_time
 print "duration: #{format("%02d:%02d:%02d", dur / (60 * 60), (dur / 60) % 60, dur % 60)}\n"
 
-Discord::Notifier.message('```'+table_array.to_table(:first_row_is_head => true).to_s+'```'+"NYSE Only at this time\nduration: #{format("%02d:%02d:%02d", dur / (60 * 60), (dur / 60) % 60, dur % 60)}\n")
+Discord::Notifier.message('```'+table_array.to_table(:first_row_is_head => true).to_s+'```'+"NYSE,NASDAQ,AMEX,OTCBB\nduration: #{format("%02d:%02d:%02d", dur / (60 * 60), (dur / 60) % 60, dur % 60)}\n")
 
